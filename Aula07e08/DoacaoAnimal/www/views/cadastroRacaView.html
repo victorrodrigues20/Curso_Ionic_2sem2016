@@ -1,0 +1,12 @@
+<ion-view view-title="Cadastro Raça" ng-init="init()">
+  <ion-content>
+    <div class="list">
+      <label class="item item-input item-floating-label">
+        <span class="input-label">Nome da Raça</span>
+        <input type="text" placeholder="Nome da Raça" ng-model="raca.descricao">
+      </label>
+
+      <button class="button button-block button-positive" ng-click="salvar()">Salvar</button>
+      <button class="button button-block button-assertive" ng-click="excluir()">Excluir</button>
+  </ion-content>
+</ion-view>

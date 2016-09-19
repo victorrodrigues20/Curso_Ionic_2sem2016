@@ -1,0 +1,9 @@
+{
+  "name": "linx-central-delivery-server",
+  "description": "Doacao Animal Service - Server",
+  "version": "0.0.1",
+  "dependencies": {
+    "async": "^2.0.0-rc.5",
+    "restify": "^4.0.4"
+  }
+}
