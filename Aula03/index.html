@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html ng-app="Aula02App">
+<head>
+    <meta charset="UTF-8">
+    <title>Cadastro de Cliente</title>
+
+    <script src="node_modules/angular/angular.js"></script>
+    <!-- Componentes UX-->
+    <link rel="stylesheet" href="components/components.css">
+    <script src="components/components.js"></script>
+
+    <script src="app.js"></script>
+    <script src="controller/clienteController.js"></script>
+</head>
+<body>
+    <div ng-controller="ClienteController">
+        Digite seu nome:
+        <input type="text" ng-model="cliente.nome">
+        Digite seu sexo:
+        <select ng-model="cliente.sexo">
+            <option value=""></option>
+            <option ng-repeat="s in opSexo" value="{{s.valor}}" >{{s.descricao}}</option>
+        </select>
+        <input type="button" ng-click="salvarCliente()" value="Salvar">
+        <br><br>
+        Seu nome é: {{cliente.nome}}
+        <br>
+        Sexo escolhido: {{cliente.sexo}}
+        <br><br>
+        <table>
+            <tr ng-repeat="c in listClientes track by $index">
+                <td>
+                    {{c.nome}}
+                </td>
+                <td>
+                    {{c.sexo}}
+                </td>
+            </tr>
+        </table>
+
+        <ux-button ux-label="Salvar"
+                   ux-width="250"
+                   ux-height="50">
+        </ux-button>
+
+    </div>
+</body>
+</html>
